@@ -26,14 +26,12 @@ export default function App() {
   return !robots.length ? (
     <h1>Loading</h1>
   ) : (
-    <ErrorBoundary fallback={<div>Something went wrong</div>}>
-      <div className="tc">
-        <h1>RoboFriends</h1>
-        <SearchBox searchChange={onSearchChange} />
-        <Scroll>
-          <CardList robots={filteredRobots} />
-        </Scroll>
-      </div>
-    </ErrorBoundary>
+    <div className="tc">
+      <h1>RoboFriends</h1>
+      <SearchBox searchChange={onSearchChange} />
+      <Scroll>
+        <CardList robots={filteredRobots} />
+      </Scroll>
+    </div>
   );
 }
